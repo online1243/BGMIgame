@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝐍𝐎𝐗𝐗𝐘 𝐈𝐃 𝐒𝐄𝐋𝐋𝐄𝐑™ | Gaming Community</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Background Slider Container */
+        .bg-slider {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        /* Liquid Glass UI Card */
+        .glass-card {
+            background: rgba(15, 15, 25, 0.45);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 165, 0, 0.25);
+            border-radius: 24px;
+            padding: 30px 20px;
+            width: 360px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+        }
+
+        /* Telegram DP */
+        .dp-container {
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 12px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #ff9900;
+            box-shadow: 0 0 12px rgba(255, 153, 0, 0.6);
+        }
+
+        .dp-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Channel Name */
+        .channel-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+            color: #ffaa00;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Safe Trust Badge Subtitle */
+        .trust-badge {
+            font-size: 0.85rem;
+            color: #00ffcc;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Telegram Button */
+        .tg-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #0088cc, #005588);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+        }
+
+        .tg-btn:hover {
+            background: linear-gradient(135deg, #0099ff, #0066aa);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-slider" id="bgSlider">
+        <div class="slide active" style="background-image: url('https://i.pinimg.com/736x/ee/55/f4/ee55f4d175cb591c8bf922f706c0c74e.jpg');"></div>
+        <div class="slide" style="background-image: url('https://i.pinimg.com/736x/9e/fb/95/9efb95100b9642c2db2d89a3b21718fe.jpg');"></div>
+        <div class="slide" style="background-image: url('https://i.pinimg.com/736x/b5/48/b0/b548b0b654d1a57702001927b0ab9932.jpg');"></div>
+        <div class="slide" style="background-image: url('https://i.pinimg.com/736x/19/40/d4/1940d462c6844a6b6e48e306b8666615.jpg');"></div>
+        <div class="slide" style="background-image: url('https://i.pinimg.com/736x/06/37/e9/0637e9a523a27f96e5f632600d40a685.jpg');"></div>
+        <div class="slide" style="background-image: url('https://i.pinimg.com/736x/d3/25/c8/d325c8a0169dcbee9b6663496cf89aa3.jpg');"></div>
+        <div class="slide" style="background-image: url('https://i.pinimg.com/736x/f4/21/ff/f421ff7ae2465e27a06aae1d40a9d330.jpg');"></div>
+    </div>
+
+    <div class="glass-card">
+        <div class="dp-container">
+            <img src="https://media1.tenor.com/m/9ZsRZ-PXPlwAAAAC/telegram-gif.gif" alt="Telegram DP">
+        </div>
+        <div class="channel-name">𝐍𝐎𝐗𝐗𝐘 𝐈𝐃 𝐒𝐄𝐋𝐋𝐄𝐑™</div>
+        <div class="trust-badge">🎮 PREMIUM GAMING COMMUNITY 🎮</div>
+        <a href="https://t.me/+QI8qK5xUGtllYTM9" target="_blank" class="tg-btn">Open Telegram</a>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+        const intervalTime = 400; // 0.40 seconds
+
+        function nextSlide() {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.add('active');
+        }
+
+        setInterval(nextSlide, intervalTime);
+    </script>
+</body>
+</html>
