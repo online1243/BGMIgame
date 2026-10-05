@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><!-- Meta Pixel Code -->
+<head>
+
+
+
+
+
+
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -17,9 +24,24 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1007825805451887&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>𝐍𝐎𝐗𝐗𝐘 𝐈𝐃 𝐒𝐄𝐋𝐋𝐄𝐑™ | Gaming Community</title>
+    <title>Exquisite Designer Sarees | Shop on WhatsApp</title>
     <style>
         * {
             margin: 0;
@@ -28,150 +50,205 @@ src="https://www.facebook.com/tr?id=1007825805451887&ev=PageView&noscript=1"
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        body, html {
+        body {
+            background-color: #f9f6f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header & Banner Section */
+        .banner-container {
+            position: relative;
             width: 100%;
-            height: 100%;
-            overflow: hidden;
+            height: 350px;
+            background: url('https://i.pinimg.com/736x/a7/b9/31/a7b93158852b2fddbe197511b68b9da7.jpg') no-repeat center center/cover;
             display: flex;
+            align-items: flex-end;
             justify-content: center;
-            align-items: center;
+            padding-bottom: 30px;
         }
 
-        /* Background Slider Container */
-        .bg-slider {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .slide {
+        .banner-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            background: rgba(0, 0, 0, 0.25);
         }
 
-        .slide.active {
-            opacity: 1;
-        }
-
-        /* Liquid Glass UI Card */
-        .glass-card {
-            background: rgba(15, 15, 25, 0.45);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(255, 165, 0, 0.25);
-            border-radius: 24px;
-            padding: 30px 20px;
-            width: 360px;
-            text-align: center;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
-            color: #ffffff;
-        }
-
-        /* Telegram DP */
-        .dp-container {
-            width: 85px;
-            height: 85px;
-            margin: 0 auto 12px auto;
+        /* Profile DP Fade Container */
+        .profile-container {
+            position: relative;
+            z-index: 2;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
+            border: 4px solid #fff;
             overflow: hidden;
-            border: 2px solid #ff9900;
-            box-shadow: 0 0 12px rgba(255, 153, 0, 0.6);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            background: #fff;
         }
 
-        .dp-container img {
+        .profile-dp {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
 
-        /* Channel Name */
-        .channel-name {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 6px;
-            letter-spacing: 0.5px;
-            color: #ffaa00;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        .profile-dp.active {
+            opacity: 1;
         }
 
-        /* Safe Trust Badge Subtitle */
-        .trust-badge {
-            font-size: 0.85rem;
-            color: #00ffcc;
+        /* Main Content */
+        .content {
+            max-width: 500px;
+            margin: -30px auto 40px auto;
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            text-align: center;
+            position: relative;
+            z-index: 3;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #2c2c2c;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* Highlights */
+        .highlights {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 25px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 12px 0;
+        }
+
+        .highlight-item {
+            font-size: 13px;
+            color: #555;
             font-weight: 600;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
         }
 
-        /* Telegram Button */
-        .tg-btn {
+        /* WhatsApp CTA Button */
+        .whatsapp-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 100%;
-            padding: 12px 20px;
-            background: linear-gradient(135deg, #0088cc, #005588);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: #ffffff;
-            font-size: 1rem;
-            font-weight: 600;
+            background-color: #40b4f6;
+            color: white;
             text-decoration: none;
-            border-radius: 14px;
+            font-size: 17px;
+            font-weight: 600;
+            padding: 15px 30px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(000, 000 , 00);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+            width: 100%;
         }
 
-        .tg-btn:hover {
-            background: linear-gradient(135deg, #0099ff, #0066aa);
+        .whatsapp-btn:hover {
+            background-color: #000000;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
+            box-shadow: 0 6px 20px rgba(00);
+        }
+
+        .whatsapp-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            fill: white;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .banner-container {
+                height: 260px;
+            }
+            .content {
+                margin: -20px 15px 30px 15px;
+                padding: 20px 15px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="bg-slider" id="bgSlider">
-        <div class="slide active" style="background-image: url('https://i.pinimg.com/736x/ee/55/f4/ee55f4d175cb591c8bf922f706c0c74e.jpg');"></div>
-        <div class="slide" style="background-image: url('https://i.pinimg.com/736x/9e/fb/95/9efb95100b9642c2db2d89a3b21718fe.jpg');"></div>
-        <div class="slide" style="background-image: url('https://i.pinimg.com/736x/b5/48/b0/b548b0b654d1a57702001927b0ab9932.jpg');"></div>
-        <div class="slide" style="background-image: url('https://i.pinimg.com/736x/19/40/d4/1940d462c6844a6b6e48e306b8666615.jpg');"></div>
-        <div class="slide" style="background-image: url('https://i.pinimg.com/736x/06/37/e9/0637e9a523a27f96e5f632600d40a685.jpg');"></div>
-        <div class="slide" style="background-image: url('https://i.pinimg.com/736x/d3/25/c8/d325c8a0169dcbee9b6663496cf89aa3.jpg');"></div>
-        <div class="slide" style="background-image: url('https://i.pinimg.com/736x/f4/21/ff/f421ff7ae2465e27a06aae1d40a9d330.jpg');"></div>
-    </div>
-
-    <div class="glass-card">
-        <div class="dp-container">
-            <img src="https://media1.tenor.com/m/9ZsRZ-PXPlwAAAAC/telegram-gif.gif" alt="Telegram DP">
+    <!-- Banner Section -->
+    <div class="banner-container">
+        <div class="banner-overlay"></div>
+        <!-- 3 DPs Fading Loop -->
+        <div class="profile-container">
+            <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/6ac414e1044db1.93452259_oAwqEOlUnVtsrpioklxnR-Akd47KpX9KLL102cU2NX821q4bICT1wvQqwF0YufHq_Ht02Tunz6YP0r8mcUowFVMT9Ci-dZGj-XqCKnf2cHxzpOMHZiqyXoeeGaSlOY5Hxe8h8bWWW5SRinHh8WjBsuLO-s-HJn3tjtqoUbafvLpw8P6iRw7FZRArHODdP8E4enu53fbBC9ic1Z.jpg" class="profile-dp active" alt="Saree Style 1">
+            <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/6ac414e1044db1.93452259_oAwqEOlUnVtsrpioklxnR-Akd47KpX9KLL102cU2NX821q4bICT1wvQqwF0YufHq_Ht02Tunz6YP0r8mcUowFVMT9Ci-dZGj-XqCKnf2cHxzpOMHZiqyXoeeGaSlOY5Hxe8h8bWWW5SRinHh8WjBsuLO-s-HJn3tjtqoUbafvLpw8P6iRw7FZRArHODdP8E4enu53fbBC9ic1Z.jpg" class="profile-dp" alt="Saree Style 2">
+            //<img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/6ac414e1044db1.93452259_oAwqEOlUnVtsrpioklxnR-Akd47KpX9KLL102cU2NX821q4bICT1wvQqwF0YufHq_Ht02Tunz6YP0r8mcUowFVMT9Ci-dZGj-XqCKnf2cHxzpOMHZiqyXoeeGaSlOY5Hxe8h8bWWW5SRinHh8WjBsuLO-s-HJn3tjtqoUbafvLpw8P6iRw7FZRArHODdP8E4enu53fbBC9ic1Z.jpg" class="profile-dp" alt="Saree Style 3">
         </div>
-        <div class="channel-name">𝐍𝐎𝐗𝐗𝐘 𝐈𝐃 𝐒𝐄𝐋𝐋𝐄𝐑™</div>
-        <div class="trust-badge">🎮 PREMIUM GAMING COMMUNITY 🎮</div>
-        <a href="https://t.me/NOXXYIDSELLER" target="_blank" class="tg-btn">Open Telegram</a>
     </div>
 
+    <!-- Content Card -->
+    <div class="content">
+        <h1>Noxxy ID Seller</h1>
+        <p class="tagline">Best BGMI ID : Trusted deal </p>
+
+        <div class="highlights">
+            <div class="highlight-item">✨ High luxury skins</div>
+            <div class="highlight-item">📉 low price</div>
+            <div class="highlight-item">💬 24/7 support</div>
+        </div>
+
+        <!-- WhatsApp Direct Link -->
+        <a href="https://wa.me/919509781700?text=hey%20i%20wanna%20order%20sari%20can%20i%20get%20more%20details" class="whatsapp-btn" target="_blank">
+           <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  width="24"
+  height="24"
+  fill="currentColor"
+  aria-label="Telegram"
+>
+  <path d="M21.9 3.2 2.7 10.6c-1.3.5-1.3 1.2-.2 1.6l4.9 1.5 1.9 5.9c.2.6.4.7.8.7.3 0 .5-.1.7-.3l2.7-2.6 5.1 3.8c.9.5 1.5.2 1.7-.9l3.1-15.2c.3-1.4-.5-2-1.5-1.5ZM9.1 13.2l10.7-6.8c.5-.3.9-.1.5.2l-8.8 8-2.4 2.3v-3.7Z"/>
+</svg>
+               JOIN TELEGRAM NOW
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; BGMI . All Rights Reserved.</p>
+    </footer>
+
+    <!-- 3 DP Fade Script (2 sec loop) -->
     <script>
-        const slides = document.querySelectorAll('.slide');
+        const dps = document.querySelectorAll('.profile-dp');
         let currentIndex = 0;
-        const intervalTime = 400; // 0.40 seconds
 
-        function nextSlide() {
-            slides[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % slides.length;
-            slides[currentIndex].classList.add('active');
-        }
-
-        setInterval(nextSlide, intervalTime);
+        setInterval(() => {
+            dps[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % dps.length;
+            dps[currentIndex].classList.add('active');
+        }, 2000);
     </script>
 </body>
 </html>
